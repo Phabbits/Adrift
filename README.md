@@ -1,5 +1,7 @@
 # Adrift
 
+Adrift is survival/adventure game.
+
 Adrift Game Mind Map
 https://mm.tt/1056611980?t=3WKlHw4iRR
 
