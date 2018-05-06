@@ -12,6 +12,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_character</object>
+    <object>objects\obj_player</object>
   </objects>
   <help>
     <rtf>help.rtf</rtf>
