@@ -71,6 +71,10 @@ else {
             <string>//Start of test code
 show_debug_message("works")
 //End
+///Check for game over
+if (instance_number(obj_enemy) &lt; 1) {
+    room_restart();
+    }
 </string>
           </argument>
         </arguments>
