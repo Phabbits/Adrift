@@ -14,6 +14,10 @@
     <sprite>sprites\spr_token</sprite>
     <sprite>sprites\spr_enemyBullet</sprite>
     <sprite>sprites\spr_statue</sprite>
+    <sprite>sprites\spr_playerWall</sprite>
+    <sprite>sprites\spr_playerToken</sprite>
+    <sprite>sprites\spr_enemy1</sprite>
+    <sprite>sprites\spr_enemy2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
