@@ -12,6 +12,7 @@
     <sprite>sprites\spr_ammo</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_token</sprite>
+    <sprite>sprites\spr_enemyBullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -33,6 +34,7 @@
     <object>objects\obj_ammo</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_token</object>
+    <object>objects\obj_enemyBullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
