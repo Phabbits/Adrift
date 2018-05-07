@@ -90,7 +90,7 @@ if (active) {
     //input
     haxis = 0;
     vaxis = 0;
-    
+    var test = true;
     // local input
     if (InputPlayer.inputs[LEFT_KEY]) haxis = -1;
     if (InputPlayer.inputs[RIGHT_KEY]) haxis = 1;
