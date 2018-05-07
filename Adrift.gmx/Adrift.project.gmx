@@ -13,6 +13,7 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_token</sprite>
     <sprite>sprites\spr_enemyBullet</sprite>
+    <sprite>sprites\spr_statue</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -31,6 +32,7 @@
     <object>objects\obj_main</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_enemy2</object>
     <object>objects\obj_ammo</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_token</object>
