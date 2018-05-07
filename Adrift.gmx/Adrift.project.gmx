@@ -11,14 +11,69 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_getKeyInput.gml</script>
+    <script>scripts\scr_getMouseInput.gml</script>
+    <script>scripts\scr_loadControls.gml</script>
+    <script>scripts\scr_saveControls.gml</script>
+    <script>scripts\scr_setControlsDefault.gml</script>
+    <script>scripts\scr_reduce.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_character</object>
+<<<<<<< HEAD
+    <object>objects\obj_localPlayer</object>
+    <object>objects\obj_main</object>
+=======
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
+>>>>>>> master
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
   </rooms>
+  <constants number="40">
+    <constant name="NETWORK_CONNECT">0</constant>
+    <constant name="NETWORK_LOGIN">2</constant>
+    <constant name="NETWORK_PLAY">1</constant>
+    <constant name="LEFT_KEY">0</constant>
+    <constant name="RIGHT_KEY">1</constant>
+    <constant name="UP_KEY">2</constant>
+    <constant name="DOWN_KEY">3</constant>
+    <constant name="ACTION_KEY">4</constant>
+    <constant name="ACTION2_KEY">5</constant>
+    <constant name="LEFTSELC_KEY">6</constant>
+    <constant name="RIGHTSELC_KEY">7</constant>
+    <constant name="KEY_TYPE">8</constant>
+    <constant name="INPUT_CMD">0</constant>
+    <constant name="PING_CMD">1</constant>
+    <constant name="STATE_ONLINE">-5</constant>
+    <constant name="STATE_CONTROLS">-4</constant>
+    <constant name="STATE_DEBUGOPTIONS">-3</constant>
+    <constant name="STATE_OPTIONS">-2</constant>
+    <constant name="STATE_MAIN">-1</constant>
+    <constant name="STATE_LOBBY">0</constant>
+    <constant name="STATE_PATHS">1</constant>
+    <constant name="STATE_GAME">2</constant>
+    <constant name="STATE_SCORE">3</constant>
+    <constant name="KEY_PRESSED">2</constant>
+    <constant name="KEY_ISPRESSED">1</constant>
+    <constant name="KEY_ISRELEASED">0</constant>
+    <constant name="KEY_RELEASED">-1</constant>
+    <constant name="CLIENT_CONNECT">5</constant>
+    <constant name="SERVER_CONNECT">6</constant>
+    <constant name="CLIENT_LOGIN">3</constant>
+    <constant name="SERVER_LOGIN">4</constant>
+    <constant name="CLIENT_PLAY">0</constant>
+    <constant name="SERVER_PLAY">2</constant>
+    <constant name="SEQUENCE_MAX">255</constant>
+    <constant name="CONTROLS_KEYBOARD">4</constant>
+    <constant name="CONTROLS_MOUSE">5</constant>
+    <constant name="CONTROLS_GP1">0</constant>
+    <constant name="CONTROLS_GP2">1</constant>
+    <constant name="CONTROLS_GP3">2</constant>
+    <constant name="CONTROLS_GP4">3</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
