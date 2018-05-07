@@ -29,6 +29,7 @@
 
 // active - whether character is active
 active = true;
+ammo = 0;
 </string>
           </argument>
         </arguments>
@@ -91,10 +92,12 @@ if (active) {
     vaxis = 0;
     
     // local input
-    if(InputPlayer.inputs[LEFT_KEY]) haxis = -1;
-    if(InputPlayer.inputs[RIGHT_KEY]) haxis = 1;
-    if(InputPlayer.inputs[UP_KEY]) vaxis = -1;
-    if(InputPlayer.inputs[DOWN_KEY]) vaxis = 1;
+    if (InputPlayer.inputs[LEFT_KEY]) haxis = -1;
+    if (InputPlayer.inputs[RIGHT_KEY]) haxis = 1;
+    if (InputPlayer.inputs[UP_KEY]) vaxis = -1;
+    if (InputPlayer.inputs[DOWN_KEY]) vaxis = 1;
+    mouseX = InputPlayer.mouseX;
+    mouseY = InputPlayer.mouseY;
     
     // moveSpeed - speed of character
     var moveSpeed = 4;
@@ -112,7 +115,41 @@ if (active) {
         vspeed = scr_reduce(vspeed);
         if vspeed = 0 break;
         }
+    
+    if (InputPlayer.inputs[ACTION_KEY]) {
+        if (ammo &gt; 0) {
+            with (instance_create(x,y,obj_bullet)) {
+                direction = point_direction(x,y,other.mouseX,other.mouseY);
+                speed = 5;
+                }
+            }
+        }
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_ammo">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collect ammo
+ammo += 10;
+instance_destroy(other);
 </string>
           </argument>
         </arguments>
