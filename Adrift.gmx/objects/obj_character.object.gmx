@@ -7,7 +7,118 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// initialize variables
+
+// active - whether character is active
+active = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// initialize input variables
+
+// inputType - the type of input, keyboard, mouse, joystick
+inputType = CONTROLS_KEYBOARD;
+
+// InputPlayer - the player object who is handling the input
+InputPlayer = noone;
+
+// mouse position
+mouseX = 0;
+mouseY = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// input
+
+// check if active
+if (active) {
+    //input
+    haxis = 0;
+    vaxis = 0;
+    
+    // local input
+    if(InputPlayer.inputs[LEFT_KEY]) haxis = -1;
+    if(InputPlayer.inputs[RIGHT_KEY]) haxis = 1;
+    if(InputPlayer.inputs[UP_KEY]) vaxis = -1;
+    if(InputPlayer.inputs[DOWN_KEY]) vaxis = 1;
+    
+    // moveSpeed - speed of character
+    var moveSpeed = 4;
+    
+    // find current speed
+    hspeed = haxis*moveSpeed;
+    vspeed = vaxis*moveSpeed;
+    
+    //collide with solid objects
+    while(!place_free(x+hspeed, y)) {
+        hspeed = scr_reduce(hspeed);
+        if hspeed = 0 break;
+        }
+    while(!place_free(x+hspeed,y+vspeed)) {
+        vspeed = scr_reduce(vspeed);
+        if vspeed = 0 break;
+        }
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
