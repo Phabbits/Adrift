@@ -9,6 +9,7 @@
     <sprite>sprites\spr_character</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_ammo</sprite>
+    <sprite>sprites\spr_bullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -26,6 +27,7 @@
     <object>objects\obj_main</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_ammo</object>
+    <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
