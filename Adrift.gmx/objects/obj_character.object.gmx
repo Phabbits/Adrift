@@ -121,6 +121,7 @@ if (active) {
             with (instance_create(x,y,obj_bullet)) {
                 direction = point_direction(x,y,other.mouseX,other.mouseY);
                 speed = 5;
+                other.ammo -= 1;
                 }
             }
         }
