@@ -125,7 +125,7 @@ if (active) {
     mouseY = InputPlayer.mouseY;
     
     // moveSpeed - speed of character
-    var moveSpeed = 4;
+    var moveSpeed = 3;
     
     // find current speed
     hspeed = haxis*moveSpeed;
