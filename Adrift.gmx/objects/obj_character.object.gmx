@@ -31,6 +31,7 @@
 active = true;
 ammo = 0;
 canShoot = true
+canBuild = true
 </string>
           </argument>
         </arguments>
@@ -62,6 +63,30 @@ InputPlayer = noone;
 // mouse position
 mouseX = 0;
 mouseY = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Reload
+canBuild = true
 </string>
           </argument>
         </arguments>
@@ -140,7 +165,7 @@ if (active) {
         vspeed = scr_reduce(vspeed);
         if vspeed = 0 break;
         }
-    
+    //Shooting
     if (InputPlayer.inputs[ACTION_KEY]) {
         if (canShoot) {       
             if (ammo &gt; 0) {
@@ -148,9 +173,20 @@ if (active) {
                     direction = point_direction(x,y,other.mouseX,other.mouseY);
                     speed = 5;
                     other.ammo -= 1;
-                    other.alarm[0] = 10;   //Set a delay for the reload time
+                    other.alarm[0] = 7;   //Set a delay for the reload time
                     other.canShoot = false;
                     }
+                }
+            }
+        }
+    
+    //Creating walls
+    if (InputPlayer.inputs[ACTION2_KEY]) {
+        if (canBuild) {
+            if (ammo &gt; 0) {
+                instance_create(x,y,obj_playerWall);
+                alarm[1] = 3;  //Set a delay for inbetween walls
+                canBuild = false
                 }
             }
         }
