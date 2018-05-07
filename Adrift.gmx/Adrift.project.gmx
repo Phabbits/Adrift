@@ -11,6 +11,7 @@
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_ammo</sprite>
     <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_token</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -21,6 +22,7 @@
     <script>scripts\scr_saveControls.gml</script>
     <script>scripts\scr_setControlsDefault.gml</script>
     <script>scripts\scr_reduce.gml</script>
+    <script>scripts\scr_incrementInBounds.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_character</object>
@@ -30,6 +32,7 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_ammo</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_token</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
