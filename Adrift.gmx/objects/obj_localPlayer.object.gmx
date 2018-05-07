@@ -89,7 +89,7 @@ inputBufferMax = 4;
             <string>/// get input
 if (inputBuffer &lt; 0) {
     var buffer = false; // whether or not input was put in
-    
+    var cow = true;
     // get input
     switch (global.controls[controls, KEY_TYPE]) {
         case CONTROLS_KEYBOARD:
