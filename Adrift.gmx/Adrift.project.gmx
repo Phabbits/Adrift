@@ -21,13 +21,9 @@
   </scripts>
   <objects name="objects">
     <object>objects\obj_character</object>
-<<<<<<< HEAD
     <object>objects\obj_localPlayer</object>
     <object>objects\obj_main</object>
-=======
-    <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
->>>>>>> master
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
